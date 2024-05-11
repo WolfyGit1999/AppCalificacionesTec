@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "587616128995",
+    "project_id": "gestionalumnospruebas",
+    "storage_bucket": "gestionalumnospruebas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:587616128995:android:f022589c3e564ccc259ad6",
+        "android_client_info": {
+          "package_name": "com.wolfydti.myapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9dfz04afN8owwIrD0MRzTba4mslTXQYk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:587616128995:android:2747930a2207d2f6259ad6",
+        "android_client_info": {
+          "package_name": "edu.tec.AppCalificacionesTec"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9dfz04afN8owwIrD0MRzTba4mslTXQYk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

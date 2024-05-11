@@ -2,7 +2,10 @@
   "expo": {
     "name": "AppCalificacionesTec",
     "slug": "AppCalificacionesTec",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "android": {
+      "package": "com.wolfydti.AppCalificacionesTec"
+    }
   },
   "name": "AppCalificacionesTec"
 }

@@ -1,21 +1,55 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import {NavigationContainer,useNavigation,DrawerActions} from '@react-navigation/native';
+//import { createStackNavigator } from '@react-navigation/stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import Icon  from 'react-native-vector-icons/Entypo';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+
+import VisLogin from './Vistas/VisLogin';
+import VisInicio from './Vistas/VisInicio';
+
+const StackNav=()=>{
+  const Stack = createStackNavigator();
+  const navigation=useNavigation();
+  return(
+    <Stack.Navigator screenOptions={{
+      statusBarcoloe: '#0163d2',
+      headerStyle: {
+        backgroundColor: '#0163d2'    
+      },
+      headerTintColor:'#fff',
+      headerTitleAlign:'center',
+      headerTitle:'Inicio', 
+      headerLeft:()=>{
+        return(
+         <Icon
+         name="menu"
+         onPress={()=>navigation.dispatch(DrawerActions.openDrawer(DrawerNav))}
+         size={30}
+         color="900"
+         />
+        ) 
+     },
+    }}>
+          <Stack.Screen name="VLogin" component={VisLogin}  />
+          <Stack.Screen name="VInicio" component={VisInicio}  />
+         
+     </Stack.Navigator> 
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
+
+function App() {
+  
+        return(
+          <NavigationContainer>
+            <StackNav/>
+          </NavigationContainer>
+        );
+
+}
+
+
+export default App;
